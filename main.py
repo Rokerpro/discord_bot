@@ -39,7 +39,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if "shit" in message.content.lower(): #if the pertifular word in "" is said then it is removed and a waring msg is sent you may as well link a file to it
+    if "shit" in message.content.lower(): #if the perticular word in "" is said then it is removed and a waring msg is sent you may as well link a file to it
         await message.delete()
         await message.channel.send(f"{message.author.mention} dont use that kind of words")
 
