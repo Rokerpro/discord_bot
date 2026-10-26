@@ -113,6 +113,7 @@ async def secret_error(ctx, error):
 
 
 
+
 @bot.command()
 async def ping(ctx):
     await ctx.send(f"Pong! {round(bot.latency * 1000)}ms")
@@ -147,6 +148,7 @@ async def avatar(ctx, member: discord.Member = None):
 
 
 
+
 @bot.command()
 async def userinfo(ctx, member: discord.Member = None):
     member = member or ctx.author
@@ -167,6 +169,7 @@ async def serverinfo(ctx):
     embed.add_field(name="Roles", value=len(guild.roles))
     embed.add_field(name="Created", value=guild.created_at.strftime("%d %b %Y"))
     await ctx.send(embed=embed)
+
 
 
 
@@ -238,6 +241,7 @@ async def announce(ctx, *, message):
 async def announce_error(ctx, error):
     if isinstance(error, commands.MissingRole):
         await ctx.send("You don't have the required role")
+
 
 
 
